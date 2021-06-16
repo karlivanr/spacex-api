@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LaunchProgramsComponent } from './launch-programs/launch-programs.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LaunchProgramsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
