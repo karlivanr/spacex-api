@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="my-3">SpaceX</h1>
+            <h1 class="my-3">SpaceX Launch Programs</h1>
         </div>
         <!--Filter Section-->
         <div class="col-md-4">
@@ -25,7 +25,7 @@
         <div class="col-md-8">
             <div class="row">
                 <div *ngFor ="let item of launchDataArray" class="col-md-4">
-                    <app-launch-details-card [data]=item></app-launch-details-card>
+                    <app-launch-details-card [data]="item"></app-launch-details-card>
                 </div>
             </div>
         </div>

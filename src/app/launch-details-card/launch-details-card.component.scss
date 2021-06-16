@@ -1,3 +1,13 @@
+.button {
+    background-color: #1d314b; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 img {
     max-width: 100%;
 }
@@ -8,11 +18,8 @@ ul {
 }
 p {
     font-size: small;
+    text-align: justify;
 }
-h1 {
-    color: #000;
-}
-
 .filter-header-wrap {
     display: flex;
     justify-content: space-between;
@@ -32,7 +39,10 @@ h1 {
     position: relative;
     background-color: #fff;
     border-radius: 5px;
-    margin-bottom: 30px;
+    padding-top: 0.5em;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0.5em;
 }
 
 .filter-section-wrapper h4 {
