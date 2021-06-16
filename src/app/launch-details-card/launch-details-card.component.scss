@@ -2,7 +2,7 @@ button {
     background-color: #1d314b;
     border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 5px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -12,6 +12,15 @@ button {
 button:hover {
     background-color: #696d74;
     transition: 0.5s;
+}
+.menu-content {
+    position: relative;
+    top: 0px;
+    transition: all 0.7s ease;
+  }
+.hide {
+    top: 10vw;
+    transition: 0.7s;
 }
 img {
     max-width: 100%;
@@ -47,7 +56,7 @@ p {
     padding-top: 0.5em;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 0.5em;
+    padding-bottom: 2em;
 }
 
 .filter-section-wrapper h4 {

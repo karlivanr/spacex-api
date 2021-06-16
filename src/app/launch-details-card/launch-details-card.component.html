@@ -7,7 +7,7 @@
             <h3>{{data.mission_name}}</h3>
             <!--Button to hide and show information about the mission-->
             <button (click)="toggleTag()" *ngIf="!showMe">Show</button>
-                <div >
+                <div [ngClass]="showMe ? 'show' : 'hide'" class="menu-content" >
                     <ul>
                         <!--Retrieves image data but the files are not loading on the API's end hence it won't display on this app as well-->
                         <figure *ngIf="showMe">
@@ -22,9 +22,9 @@
                             <!--Shows details about the mission-->
                             <p>{{data.details}}</p>
                         </li>
-                        <button (click)="toggleTag()" *ngIf="showMe">Hide</button>
                     </ul>
                 </div>
+            <button (click)="toggleTag()" *ngIf="showMe">Hide</button>
         </div>
     </div>
 </div>
