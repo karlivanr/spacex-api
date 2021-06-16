@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./launch-details-card.component.scss']
 })
 export class LaunchDetailsCardComponent implements OnInit, OnChanges {
+
+  showMe:boolean=false
+  toggleTag(){
+    this.showMe=!this.showMe
+  }
+
   @Input() data: any;
 
   constructor() { }
