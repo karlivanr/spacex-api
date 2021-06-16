@@ -6,22 +6,25 @@
             <!--Mission Name-->
             <h3>{{data.mission_name}}</h3>
             <!--Button to hide and show information about the mission-->
-            <button (click)="toggleTag()">Show / Hide</button>
-            <ul>
-                <!--Retrieves image data but the files are not loading on the API's end hence it won't display on the app as well-->
-                <figure *ngIf="showMe">
-                    <img src="{{data.links.mission_patch_small}}" alt="{{data.rocket.rocket_name}}">
-                </figure>
-                <li *ngIf="showMe">
-                    <!--Rocket Name and Launch Year of the mission-->
-                    <h5><strong>Rocket Name: </strong> {{data.rocket.rocket_name}}</h5>
-                    <h5><strong>Launch Year: </strong> {{data.launch_year}}</h5>
-                </li>
-                <li *ngIf="showMe">
-                    <!--Shows details about the mission-->
-                    <p>{{data.details}}</p>
-                </li>
-            </ul>
+            <button (click)="toggleTag()" *ngIf="!showMe">Show</button>
+                <div >
+                    <ul>
+                        <!--Retrieves image data but the files are not loading on the API's end hence it won't display on this app as well-->
+                        <figure *ngIf="showMe">
+                            <img src="{{data.links.mission_patch_small}}" alt="{{data.rocket.rocket_name}}">
+                        </figure>
+                        <li *ngIf="showMe">
+                            <!--Rocket Name and Launch Year of the mission-->
+                            <p>Rocket Name: <strong>{{data.rocket.rocket_name}}</strong></p>
+                            <p>Launch Year: <strong>{{data.launch_year}}</strong></p>
+                        </li>
+                        <li *ngIf="showMe">
+                            <!--Shows details about the mission-->
+                            <p>{{data.details}}</p>
+                        </li>
+                        <button (click)="toggleTag()" *ngIf="showMe">Hide</button>
+                    </ul>
+                </div>
         </div>
     </div>
 </div>

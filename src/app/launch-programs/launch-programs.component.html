@@ -22,7 +22,8 @@
         </div>
         <!--Data Retrieval from SpaceX API-->
         <div class="col-md-12">
-            <div class="row">
+            <p *ngIf="isLoading" class="loading-text">Please wait while the data is loading...</p>
+            <div *ngIf="!isLoading" class="row">
                 <div *ngFor ="let item of launchDataArray" class="col-md-4">
                     <app-launch-details-card [data]="item"></app-launch-details-card>
                 </div>
